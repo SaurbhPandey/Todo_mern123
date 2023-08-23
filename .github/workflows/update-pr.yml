@@ -80,7 +80,7 @@ jobs:
           committer: GitHub <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           signoff: false
-          branch: new-branch
+          branch: update-from-upstream
           base: master
           delete-branch: false
           title: '[Example] Update report'
