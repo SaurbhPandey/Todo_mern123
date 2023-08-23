@@ -68,8 +68,11 @@ jobs:
       # - name: Make changes to pull request
       #   run: date +%s > report.txt
 
+      - name: Remote Changes
+        run: git remote add source https://github.com/karanshukla430/Todo_mern.git
+        
       - name: Pull Changes
-        run: git pull origin update-from-upstream
+        run: git pull source master
 
       - name: Create Pull Request
         id: cpr
@@ -80,7 +83,7 @@ jobs:
           committer: GitHub <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           signoff: false
-          branch: update-from-upstream
+          branch: new-branch
           base: master
           delete-branch: false
           title: '[Example] Update report'
