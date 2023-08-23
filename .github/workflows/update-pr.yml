@@ -68,9 +68,6 @@ jobs:
       # - name: Make changes to pull request
       #   run: date +%s > report.txt
 
-      - name: fetch Changes
-        run: git fetch update-from-upstream
-
       - name: Pull Changes
         run: git pull update-from-upstream
 
