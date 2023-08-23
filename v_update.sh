@@ -43,7 +43,6 @@ else
         git add .
         git commit -m "ohoooo '$DATE_TIME'"
         git push origin new-branch
-        git checkout master
 
 
     else
