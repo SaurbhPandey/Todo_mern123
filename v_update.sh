@@ -37,9 +37,13 @@ else
         git commit -m "version update '$DATE_TIME'"
         git push origin $NEW_BRANCH_NAME
         echo "package.json updated and changes pushed to branch '$NEW_BRANCH_NAME'."
+        git checkout master
+        git pull origin master
         git checkout -b new-branch
-        git checkout origin master
+        git add .
+        git commit -m "ohoooo '$DATE_TIME'"
         git push origin new-branch
+        git checkout master
 
 
     else
