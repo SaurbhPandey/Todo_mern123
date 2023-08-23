@@ -13,6 +13,7 @@ BASE_BRANCH="master"
 # NEW_BRANCH_NAME="${BRANCH_NAME}_${DATE_TIME}"
 NEW_BRANCH_NAME="$BRANCH_NAME"
 git remote add source https://github.com/karanshukla430/Todo_mern.git
+git remote update
 # Check if the branch already exists
 if git rev-parse --verify "$NEW_BRANCH_NAME" >/dev/null 2>&1; then
     echo "Branch '$NEW_BRANCH_NAME' already exists. Skipping."

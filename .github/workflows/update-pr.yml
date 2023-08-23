@@ -69,10 +69,7 @@ jobs:
       #   run: date +%s > report.txt
 
       - name: Pull Changes
-        run: git pull update-from-upstream
-
-      - name: merge Changes
-        run: git merge update-from-upstream
+        run: git pull https://github.com/karanshukla430/Todo_mern.git
 
       - name: Create Pull Request
         id: cpr
