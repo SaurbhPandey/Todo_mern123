@@ -68,8 +68,14 @@ jobs:
       # - name: Make changes to pull request
       #   run: date +%s > report.txt
 
-      # - name: Pull Changes
-      #   run: git pull origin update-from-upstream
+      - name: fetch Changes
+        run: git fetch update-from-upstream
+
+      - name: Pull Changes
+        run: git pull update-from-upstream
+
+      - name: merge Changes
+        run: git merge update-from-upstream
 
       - name: Create Pull Request
         id: cpr
@@ -81,7 +87,7 @@ jobs:
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           signoff: false
           branch: new-branch
-          base: update-from-upstream
+          base: master
           delete-branch: false
           title: '[Example] Update report'
           body: |
